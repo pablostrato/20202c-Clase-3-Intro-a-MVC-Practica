@@ -1,0 +1,12 @@
+﻿@model Entidades.Alimento
+@{
+    ViewBag.Title = "Editar";
+}
+
+<h2>Editar</h2>
+<form action="/Alimentos/Editar" method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
+    Nombre: <input type="type" name="Nombre" value="@Model.Nombre" />
+    Peso: <input type="type" name="Peso" value="@Model.Peso" />
+          <input type="submit" value="Editar" />
+</form>

@@ -1,0 +1,27 @@
+﻿@model List<Entidades.Alimento>
+@{
+    ViewBag.Title = "Todos";
+}
+
+<h2>Todos</h2>
+<a href="/Alimentos/Alta">Crear Alimento</a>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Peso</th>
+        <th>Editar</th>
+        <th>Borrar</th>
+    </tr>
+    @foreach (Entidades.Alimento ali in Model)
+    {
+<tr>
+    <td>@ali.Id</td>
+    <td>@ali.Nombre</td>
+    <td>@ali.Peso</td>
+    <td><a href="/Alimentos/Editar/@ali.Id">Editar</a></td>
+    <td><a href="/Alimentos/Borrar/@ali.Id">Borrar</a></td>
+</tr>
+    }
+
+</table>
